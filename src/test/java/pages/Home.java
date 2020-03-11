@@ -10,7 +10,7 @@ public class Home {
         driver = stepDriver;
     }
 
-    public void abrirPagina() {
+    public void open() {
         String url = "http://agapito-server.herokuapp.com/";
         driver.openURL(url);
     }

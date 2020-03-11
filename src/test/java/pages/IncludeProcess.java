@@ -2,22 +2,22 @@ package pages;
 
 import support.DriverQA;
 
-public class ProcessoInclusao {
+public class IncludeProcess {
     private DriverQA driver;
 
-    public ProcessoInclusao(DriverQA stepDriver) {
+    public IncludeProcess(DriverQA stepDriver) {
         driver = stepDriver;
     }
 
-    public void preencherCampo(String campo, String valor) {
+    public void FillField(String campo, String valor) {
         driver.sendKeys(valor, campo);
     }
 
-    public void selecionarUrgencia(String valor) {
+    public void selectUrgencia(String valor) {
         driver.selectByText(valor, "processo_urgente");
     }
 
-    public void clicaCampoArbitramento(String valor) {
+    public void clickFieldArbitramento(String valor) {
         driver.click( "processo_arbitramento_s");
     }
 }

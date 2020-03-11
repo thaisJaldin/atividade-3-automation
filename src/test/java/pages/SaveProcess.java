@@ -2,14 +2,14 @@ package pages;
 
 import support.DriverQA;
 
-public class ProcessoSalvar {
+public class SaveProcess {
     private DriverQA driver;
 
-    public ProcessoSalvar(DriverQA stepDriver){
+    public SaveProcess(DriverQA stepDriver){
         driver = stepDriver;
     }
 
-    public void clicarSalvar(String botao) {
+    public void clickSave(String botao) {
         driver.click(botao);
     }
 }

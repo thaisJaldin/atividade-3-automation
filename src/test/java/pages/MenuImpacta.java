@@ -8,7 +8,7 @@ public class MenuImpacta {
         driver = stepDriver;
     }
 
-    public void clicarMenu(String vMenu) {
+    public void clickMenu(String vMenu) {
         driver.click(vMenu);
     }
 }

@@ -2,11 +2,11 @@ package pages;
 
 import support.DriverQA;
 
-public class GridProcesso {
+public class GridProcess {
 
     private DriverQA driver;
 
-    public GridProcesso(DriverQA stepDriver){
+    public GridProcess(DriverQA stepDriver){
         driver = stepDriver;
     }
 
@@ -14,7 +14,7 @@ public class GridProcesso {
        driver.click("btn-novo");
     }
 
-    public boolean existeTexto(String menssage) {
-        return driver.getTextAllPage(menssage);
+    public boolean existText(String message) {
+        return driver.getTextAllPage(message);
     }
 }
