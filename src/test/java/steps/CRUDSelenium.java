@@ -17,6 +17,8 @@ public class CRUDSelenium extends BaseSteps {
     private IncludeProcess includeProcess = new IncludeProcess(driver);
     private SaveProcess saveProcess = new SaveProcess(driver);
     private ShowProcess showProcess = new ShowProcess(driver);
+    private EditProcess editProcess = new EditProcess(driver);
+    private DeleteProcess deleteProcess = new DeleteProcess(driver);
 
     @Given("^POST - A user want to add a item$")
     public void postAUserWantToAddAItem() {
@@ -45,7 +47,7 @@ public class CRUDSelenium extends BaseSteps {
 
     @And("^The user click \"([^\"]*)\" radio button$")
     public void theUserClickRadioButton(String value) {
-       includeProcess.clickFieldArbitramento(value);
+        includeProcess.clickFieldArbitramento(value);
     }
 
     @When("^The user click on button \"([^\"]*)\" to save$")
@@ -65,30 +67,31 @@ public class CRUDSelenium extends BaseSteps {
 
     @When("^The user click on button Mostrar of list with id \"([^\"]*)\"$")
     public void userSelectTheItemOfListWithId(String id) {
-        ShowProcess.clickShow(id);
+        showProcess.clickShow(id);
     }
 
-    @Then("^the user should see the details os process$")
+    @Then("^The user should see the details os process$")
     public void theUserShouldSeeTheDetailsOsProcess() {
+        Assert.assertTrue(gridProcess.existText("Vara"));
     }
 
     @Given("^PUT - A user want to update a item$")
     public void putAUserWantToUpdateAItem() {
+        home.open();
     }
 
     @And("^The user click on button Editar of item with id \"([^\"]*)\"$")
-    public void theUserClickOnButtonEditarOfItemWithId(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void theUserClickOnButtonEditarOfItemWithId(String id) {
+        editProcess.clickEdit(id);
     }
 
-    @Given("^DELETE - A user want to delete a item$")
+    @Given("^DELETE - A user want to delete a item")
     public void deleteAUserWantToDeleteAItem() {
+        home.open();
     }
 
     @When("^user press button Apagar of item with id \"([^\"]*)\"$")
-    public void userPressButtonApagarOfItemWithId(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void userPressButtonApagarOfItemWithId(String id) {
+        deleteProcess.clickDelete(id);
     }
 }
