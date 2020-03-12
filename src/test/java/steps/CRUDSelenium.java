@@ -94,4 +94,9 @@ public class CRUDSelenium extends BaseSteps {
     public void userPressButtonApagarOfItemWithId(String id) {
         deleteProcess.clickDelete(id);
     }
+
+    @Then("^The item with id \"([^\"]*)\" should not exist$")
+    public void theItemWithIdShouldNotExist(String id) throws Throwable {
+        Assert.assertFalse(deleteProcess.wasDelete(id));
+    }
 }

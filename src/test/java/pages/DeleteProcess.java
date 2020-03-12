@@ -14,4 +14,8 @@ public class DeleteProcess {
         driver.click("btn-delete_" + id);
         driver.ChooseOkOnNextConfirmation();
     }
+
+    public boolean wasDelete(String id){
+        return driver.existElement("btn-delete_" + id);
+    }
 }

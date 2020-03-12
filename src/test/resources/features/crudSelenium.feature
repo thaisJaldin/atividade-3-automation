@@ -26,7 +26,7 @@ Feature: Test a simple CRUD Process with Selenium
 
     Given PUT - A user want to update a item
     And The user click on menu "processos"
-    And The user click on button Editar of item with id "7"
+    And The user click on button Editar of item with id "461"
     And The user click on field "processo_vara" and set value "50"
     And The user click on field "processo_numero_processo" and set value "5050"
     And The user click on field "processo_natureza" and set value "Guardar"
@@ -35,5 +35,5 @@ Feature: Test a simple CRUD Process with Selenium
 
     Given DELETE - A user want to delete a item
     And The user click on menu "processos"
-    When user press button Apagar of item with id "7"
-    Then The user should see the message "Processo atualizado com sucesso."
+    When user press button Apagar of item with id "465"
+    Then The item with id "465" should not exist
