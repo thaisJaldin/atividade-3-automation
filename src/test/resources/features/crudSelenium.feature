@@ -35,5 +35,5 @@ Feature: Test a simple CRUD Process with Selenium
 
     Given DELETE - A user want to delete a item
     And The user click on menu "processos"
-    When user press button Apagar of item with id "465"
-    Then The item with id "465" should not exist
+    When user press button Apagar of item with id "338"
+    Then The item with id "338" should not exist

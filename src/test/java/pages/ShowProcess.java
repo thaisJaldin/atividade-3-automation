@@ -14,11 +14,7 @@ public class ShowProcess {
         driver.click("btn-show_" + id);
     }
 
-    public String recuperarMensagemComSucesso() {
-        return driver.getText("notice");
-    }
-
-    public void clicarVoltar() {
+    public void clickBack() {
         driver.click(".ls-btn-primary-danger", "css");
     }
 }

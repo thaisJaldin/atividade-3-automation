@@ -94,14 +94,6 @@ public class DriverQA {
         element.click();
     }
 
-    public boolean existElement(String parValue, String... parType) {
-        try {
-            return null != findElem(parValue, parType);
-        } catch (NoSuchElementException e){
-            return false;
-        }
-    }
-
     public void openURL(String parUrl) {
         driver.get(parUrl);
     }

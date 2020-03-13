@@ -58,6 +58,7 @@ public class CRUDSelenium extends BaseSteps {
     @Then("^The user should see the message \"([^\"]*)\"$")
     public void theUserShouldSeeTheMessage(String message) {
         Assert.assertTrue(gridProcess.existText(message));
+        showProcess.clickBack();
     }
 
     @Given("^GET - A user want to see a item details$")
@@ -97,6 +98,6 @@ public class CRUDSelenium extends BaseSteps {
 
     @Then("^The item with id \"([^\"]*)\" should not exist$")
     public void theItemWithIdShouldNotExist(String id) throws Throwable {
-        Assert.assertFalse(deleteProcess.wasDelete(id));
+        Assert.assertFalse(gridProcess.existText("btn-delete_" + id));
     }
 }
