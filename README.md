@@ -1,4 +1,4 @@
-#Tarefa 3 Automation
+# Tarefa 3 Automation
 Será necessário entregar um material de testes de sistema (WEB com Selenium), o projeto deverá seguir os seguintes itens abaixo:
 
 - Será em dupla.
@@ -26,6 +26,6 @@ Será necessário entregar um material de testes de sistema (WEB com Selenium), 
 - Deverá ser colocado no GitHub.
 - No README do projeto deverá conter o nome dos dois alunos da dupla.
 
-#Alunos
+# Alunos
 - Ticiani Aguiar Almeida
 - Thais Grisel Jaldin Siles
